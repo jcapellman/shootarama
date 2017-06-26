@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.14
+VisualStudioVersion = 15.0.26608.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "shootarama", "shootarama\shootarama.shproj", "{E213DBA8-8C27-41E6-A55D-C29A3407F984}"
 EndProject
@@ -14,6 +14,7 @@ EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		shootarama\shootarama.projitems*{0bca3d88-8b70-4a0d-9783-fe61e8fef38c}*SharedItemsImports = 4
+		shootarama\shootarama.projitems*{4aca0099-e538-444a-8859-8c241fe7f409}*SharedItemsImports = 4
 		shootarama\shootarama.projitems*{8459b9d2-0f42-43a4-903b-70e23e26c804}*SharedItemsImports = 4
 		shootarama\shootarama.projitems*{e213dba8-8c27-41e6-a55d-c29a3407f984}*SharedItemsImports = 13
 	EndGlobalSection
