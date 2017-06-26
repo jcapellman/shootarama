@@ -24631,14 +24631,8 @@
       "projectStyle": "ProjectJson"
     },
     "dependencies": {
-      "Microsoft.NETCore.UniversalWindowsPlatform": {
-        "target": "Package",
-        "version": "[5.3.3, )"
-      },
-      "Xamarin.Forms": {
-        "target": "Package",
-        "version": "[2.3.4.247, )"
-      }
+      "Microsoft.NETCore.UniversalWindowsPlatform": "5.3.3",
+      "Xamarin.Forms": "2.3.4.247"
     },
     "frameworks": {
       "uap10.0.14393": {}
