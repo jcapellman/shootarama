@@ -19,5 +19,7 @@
         public int Clutch { get; set; }
 
         public int Salary { get; set; }
+
+        public int GameID { get; set; }
     }
 }
