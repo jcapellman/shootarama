@@ -13,6 +13,12 @@ namespace shootarama.DB
     {
         public DbSet<Players> Players { get; set; }
         
+        public DbSet<Teams> Teams { get; set; }
+
+        public DbSet<LocationNames> LocationNames { get; set; }
+
+        public DbSet<PlayerNames> PlayerNames { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite($"Data Source={Common.Constants.FILENAME_SQLITE_DB}");
