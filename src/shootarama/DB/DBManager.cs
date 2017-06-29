@@ -17,6 +17,8 @@ namespace shootarama.DB
 
         public DbSet<LocationNames> LocationNames { get; set; }
 
+        public DbSet<TeamNames> TeamNames { get; set; }
+
         public DbSet<PlayerNames> PlayerNames { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
