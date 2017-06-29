@@ -4,7 +4,7 @@ A remake of my first program/game that I originally wrote in QBasic back in June
 
 Using SQLite and Xamarin Forms with C# targeting iOS, UWP and Android platforms.
 
-## Gameplay
+## Game Bible
 
 ### Gameplay
 * Manage a Team juggling trades, drafting and fans
