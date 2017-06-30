@@ -2,6 +2,8 @@
 {
     public abstract class BaseGameType
     {
-        public abstract int CreateNewGame(string teamName);
+        protected int GameID;
+
+        public abstract void CreateNewGame(string teamName);
     }
 }
