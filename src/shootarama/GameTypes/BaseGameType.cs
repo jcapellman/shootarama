@@ -9,8 +9,6 @@ namespace shootarama.GameTypes
 {
     public abstract class BaseGameType
     {
-        private DBManager _dbManager;
-
         protected int GameID;
 
         protected List<Teams> CreateTeams(string teamName)
