@@ -9,3 +9,8 @@ Using SQLite and Xamarin Forms with C# targeting iOS, UWP and Android platforms.
 ### Gameplay
 * Manage a Team juggling trades, drafting and fans
 * Consecutive losing seasons will lead you to being fired from your posting
+* Randomized Teams, Players and Team Locations creates a near unique experience every game
+
+### Technology
+* Xamarin Forms (C#)
+* SQLite
