@@ -32,12 +32,41 @@ namespace shootarama.GameTypes
                         Location = locationNames[x]
                     };
 
-                    teams.Add(team);
                     db.SaveChanges();
+                    
+                    teams.Add(team);
                 }
 
                 return teams;
             }
+        }
+
+        protected List<Players> CreatePlayers(List<Teams> teams)
+        {
+            var players = new List<Players>();
+            
+            var random = new Random((int)DateTime.Now.Ticks);
+
+            using (var db = new DBManager())
+            {
+                var playerNames = db.PlayerNames.OrderBy(a => random.Next())
+                    .Take(teams.Count * Common.Constants.NUMBER_OF_PLAYERS_PER_TEAM).ToList();
+
+                for (var x = 0; x < teams.Count; x++)
+                {
+                    var player = new Players
+                    {
+                        FirstName = playerNames[x].FirstName,
+                        LastName = playerNames[x].LastName
+                    };
+
+                    db.SaveChanges();
+
+                    players.Add(player);
+                }
+            }
+
+            return players;
         }
 
         protected void GenerateGame(string firstName, string lastName)

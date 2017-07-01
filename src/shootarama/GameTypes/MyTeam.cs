@@ -7,6 +7,8 @@
             GenerateGame(firstName, lastName);
 
             var teams = CreateTeams(teamName);
+
+            CreatePlayers(teams);
         }
     }
 }
