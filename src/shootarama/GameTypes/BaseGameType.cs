@@ -57,8 +57,12 @@ namespace shootarama.GameTypes
                     var player = new Players
                     {
                         FirstName = playerNames[x].FirstName,
-                        LastName = playerNames[x].LastName
+                        LastName = playerNames[x].LastName,
+                        Age = random.Next(Common.Constants.MINIMUM_AGE, Common.Constants.MAXIMUM_AGE),
                     };
+
+                    player.Experience = player.Age -
+                                        random.Next(Common.Constants.MINIMUM_AGE, Common.Constants.MAXIMUM_ENTRY_AGE);
 
                     db.SaveChanges();
 
