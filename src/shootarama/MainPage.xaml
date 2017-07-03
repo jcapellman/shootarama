@@ -7,10 +7,13 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-
-        <Grid Grid.Row="0" Margin="20,200,20,20">
+ 
+        <Image Grid.Row="0" HorizontalOptions="Center" Source="Images/logo.png" />
+        
+        <Grid Grid.Row="1" Margin="20,20,20,20">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -22,6 +25,6 @@
             <Button Grid.Row="2" Text="About" BackgroundColor="White" />
         </Grid>
         
-        <Label Grid.Row="3" VerticalOptions="End" HorizontalOptions="Center" FontSize="20" TextColor="White"  Text="(C)1995-2017 Jarred Capellman." />
+        <Label Grid.Row="2" VerticalOptions="End" HorizontalOptions="Center" FontSize="20" TextColor="White"  Text="(C)1995-2017 Jarred Capellman." />
     </Grid>
 </ContentPage>
