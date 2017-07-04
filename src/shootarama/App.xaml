@@ -13,7 +13,17 @@
                 <Setter Property="BackgroundColor" Value="Orange" />
                 <Setter Property="Margin" Value="20,20,20,20" />
             </Style>
-            
+
+            <Style x:Key="CriticalButton" TargetType="Button">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="BorderColor" Value="White" />
+                <Setter Property="BorderRadius" Value="10" />
+                <Setter Property="BorderWidth" Value="5" />
+                <Setter Property="BackgroundColor" Value="Red" />
+                <Setter Property="Margin" Value="20,20,20,20" />
+            </Style>
+
             <Style x:Key="PageHeader" TargetType="Label">
                 <Setter Property="FontSize" Value="40" />
                 <Setter Property="TextColor" Value="White" />
@@ -24,6 +34,24 @@
                 <Setter Property="FontSize" Value="20" />
                 <Setter Property="TextColor" Value="White" />
                 <Setter Property="Margin" Value="20,0,20,20" />
+            </Style>
+            
+            <Style x:Key="OptionsText" TargetType="Label">
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="Margin" Value="10,0,10,0" />
+            </Style>
+
+            <Style x:Key="OptionsSwitch" TargetType="Switch">
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="End" />
+                <Setter Property="Margin" Value="0,0,10,0" />
+            </Style>
+
+            <Style x:Key="OptionsGrid" TargetType="Grid">
+                <Setter Property="BackgroundColor" Value="Orange" />
+                <Setter Property="Margin" Value="0,0,0,10" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>

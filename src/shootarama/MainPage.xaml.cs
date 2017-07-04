@@ -17,5 +17,10 @@ namespace shootarama
 	    {
             await Navigation.PushAsync(new AboutPage(), true);
         }
+
+	    private async void btnOptions_Click(object sender, EventArgs e)
+	    {
+            await Navigation.PushAsync(new OptionsPage(), true);
+        }
 	}
 }

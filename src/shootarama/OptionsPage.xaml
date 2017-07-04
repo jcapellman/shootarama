@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="shootarama.OptionsPage"             
+             BackgroundImage="Images/MenuBG.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Text="Options" Style="{StaticResource PageHeader}" />
+
+        <Grid Grid.Row="1" Margin="20,0,20,20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Style="{StaticResource OptionsGrid}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                
+                <Label Grid.Column="0" Style="{StaticResource OptionsText}" Text="Enable Music" />
+                <Switch Grid.Column="1" Style="{StaticResource OptionsSwitch}" />
+            </Grid>
+
+            <Grid Grid.Row="1" Style="{StaticResource OptionsGrid}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0" Style="{StaticResource OptionsText}" Text="Enable Sounds" />
+                <Switch Grid.Column="1" Style="{StaticResource OptionsSwitch}" />
+            </Grid>
+
+            <Button Grid.Row="2" Text="Reset Game Database" Style="{StaticResource CriticalButton}" />
+        </Grid>
+
+        <Button Grid.Row="2" VerticalOptions="End" Text="Back" Style="{StaticResource MainButton}" Clicked="btnBack_Click" />
+    </Grid>
+</ContentPage>
