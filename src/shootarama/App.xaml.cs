@@ -8,7 +8,7 @@ namespace shootarama
 		{
 			InitializeComponent();
 
-			MainPage = new shootarama.MainPage();
+			MainPage = new NavigationPage(new MainPage());
 		}
 	}
 }

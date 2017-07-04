@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="shootarama.AboutPage"             
+             BackgroundImage="Images/MenuBG.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <Label Grid.Row="0" Text="About" TextColor="White" />
+        
+        <Label Grid.Row="1" Text="Shoot a Rama was originally written for MS-DOS back in June 1995." TextColor="White" />
+        
+        <Button Grid.Row="2" VerticalOptions="End" Text="Back" Style="{StaticResource MainButton}" Clicked="btnBack_Click" />
+    </Grid>
+</ContentPage>
