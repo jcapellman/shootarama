@@ -168,6 +168,12 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\shootarama.library\shootarama.library.csproj">
+      <Project>{93a08839-a1ed-42b8-87cb-a077304beaa2}</Project>
+      <Name>shootarama.library</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
