@@ -13,6 +13,18 @@
                 <Setter Property="BackgroundColor" Value="Orange" />
                 <Setter Property="Margin" Value="20,20,20,20" />
             </Style>
+            
+            <Style x:Key="PageHeader" TargetType="Label">
+                <Setter Property="FontSize" Value="40" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="Margin" Value="20,20,0,20" />
+            </Style>
+
+            <Style x:Key="PageContentText" TargetType="Label">
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="Margin" Value="20,0,20,20" />
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
