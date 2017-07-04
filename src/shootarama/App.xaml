@@ -5,8 +5,13 @@
 	<Application.Resources>
         <ResourceDictionary>
             <Style x:Key="MainButton" TargetType="Button">
-                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="BorderColor" Value="White" />
+                <Setter Property="BorderRadius" Value="10" />
+                <Setter Property="BorderWidth" Value="5" />
                 <Setter Property="BackgroundColor" Value="Orange" />
+                <Setter Property="Margin" Value="20,20,20,20" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>
