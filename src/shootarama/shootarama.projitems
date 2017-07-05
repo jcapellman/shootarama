@@ -27,6 +27,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)DB\Tables\Teams.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameTypes\BaseGameType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameTypes\MyTeam.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LoadGamePage.xaml.cs">
+      <DependentUpon>LoadGamePage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -53,6 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)OptionsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)LoadGamePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

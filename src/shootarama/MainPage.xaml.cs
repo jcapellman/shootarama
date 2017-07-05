@@ -22,5 +22,10 @@ namespace shootarama
 	    {
             await Navigation.PushAsync(new OptionsPage(), true);
         }
-	}
+
+	    private async void btnLoadGame_Click(object sender, EventArgs e)
+	    {
+	        await Navigation.PushAsync(new LoadGamePage(), true);
+	    }
+    }
 }

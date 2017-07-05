@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="shootarama.LoadGamePage"             
+             BackgroundImage="Images/MenuBG.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Text="Load Game" Style="{StaticResource PageHeader}" />
+
+        <Label Grid.Row="1" Text="Tap the game listed below to load it" Style="{StaticResource PageContentText}" />
+
+        <ListView Grid.Row="2">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Style="{StaticResource OptionsGrid}">
+                        <Label Style="{StaticResource OptionsText}" Text="{Binding}" />
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        <Button Grid.Row="3" VerticalOptions="End" Text="Back" Style="{StaticResource MainButton}" Clicked="btnBack_Click" />
+    </Grid>
+</ContentPage>
