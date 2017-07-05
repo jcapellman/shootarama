@@ -15,11 +15,11 @@
 
         <Label Grid.Row="1" Text="Tap the game listed below to load it" Style="{StaticResource PageContentText}" />
 
-        <ListView Grid.Row="2">
+        <ListView Grid.Row="2" ItemsSource="{Binding GameList}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid Style="{StaticResource OptionsGrid}">
-                        <Label Style="{StaticResource OptionsText}" Text="{Binding}" />
+                        <Label Style="{StaticResource OptionsText}" Text="{Binding LastSaveDate}" />
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
