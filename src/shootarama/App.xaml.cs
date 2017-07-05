@@ -1,4 +1,6 @@
-﻿using Xamarin.Forms;
+﻿using shootarama.DB;
+
+using Xamarin.Forms;
 
 namespace shootarama
 {
@@ -7,6 +9,11 @@ namespace shootarama
 		public App ()
 		{
 			InitializeComponent();
+
+		    using (var db = new DBManager())
+		    {
+		        db.Initialize();
+		    }
 
 			MainPage = new NavigationPage(new MainPage());
 		}

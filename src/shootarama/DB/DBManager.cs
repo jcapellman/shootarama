@@ -28,6 +28,11 @@ namespace shootarama.DB
             optionsBuilder.UseSqlite($"Data Source={Common.Constants.FILENAME_SQLITE_DB}");
         }
 
+        public void Initialize()
+        {
+            Database.Migrate();
+        }
+
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
             var changeSet = ChangeTracker.Entries();

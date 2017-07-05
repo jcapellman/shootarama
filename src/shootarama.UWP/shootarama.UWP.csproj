@@ -99,6 +99,11 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20170705015310_InitialMigration.cs" />
+    <Compile Include="Migrations\20170705015310_InitialMigration.designer.cs">
+      <DependentUpon>20170705015310_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\DBManagerModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
