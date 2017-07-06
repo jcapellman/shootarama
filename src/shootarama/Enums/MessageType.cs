@@ -2,6 +2,7 @@
 {
     public enum MessageType
     {
-        GAMES_GET_LIST
+        GAMES_GET_LIST,
+        SQLITE_INITIALIZE
     }
 }
