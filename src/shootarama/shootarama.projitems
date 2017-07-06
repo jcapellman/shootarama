@@ -17,6 +17,8 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Common\Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Containers\MessageContainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controllers\MessageController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DB\DBManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DB\Tables\BaseTable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DB\Tables\Games.cs" />
@@ -25,6 +27,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)DB\Tables\Players.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DB\Tables\TeamNames.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DB\Tables\Teams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enums\MessageType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameTypes\BaseGameType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameTypes\MyTeam.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)LoadGamePage.xaml.cs">
