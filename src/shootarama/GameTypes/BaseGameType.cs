@@ -19,8 +19,8 @@ namespace shootarama.GameTypes
 
                 var random = new Random((int)DateTime.Now.Ticks);
 
-                var teamNames = db.TeamNames.OrderBy(a => random.Next()).Take(Common.Constants.NUMBER_OF_TEAMS - 1).Select(a => a.Name).ToList();
-                var locationNames = db.LocationNames.OrderBy(a => random.Next())
+                var teamNames = db.SelectMany<TeamNames>().OrderBy(a => random.Next()).Take(Common.Constants.NUMBER_OF_TEAMS - 1).Select(a => a.Name).ToList();
+                var locationNames = db.SelectMany<LocationNames>().OrderBy(a => random.Next())
                     .Take(Common.Constants.NUMBER_OF_TEAMS - 1).Select(a => a.Name).ToList();
 
                 for (int x = 0; x < Common.Constants.NUMBER_OF_TEAMS - 1; x++)
@@ -49,7 +49,7 @@ namespace shootarama.GameTypes
 
             using (var db = new DBManager())
             {
-                var playerNames = db.PlayerNames.OrderBy(a => random.Next())
+                var playerNames = db.SelectMany<PlayerNames>().OrderBy(a => random.Next())
                     .Take(teams.Count * Common.Constants.NUMBER_OF_PLAYERS_PER_TEAM).ToList();
 
                 for (var x = 0; x < teams.Count; x++)
@@ -73,7 +73,7 @@ namespace shootarama.GameTypes
             return players;
         }
 
-        protected void GenerateGame(string firstName, string lastName)
+        protected async void GenerateGame(string firstName, string lastName)
         {
             using (var db = new DBManager())
             {
@@ -83,10 +83,7 @@ namespace shootarama.GameTypes
                     LastName = lastName
                 };
 
-                db.Games.Add(game);
-                db.SaveChanges();
-
-                GameID = game.ID;
+                GameID = await db.InsertOneAsync(game);                
             }
         }
 

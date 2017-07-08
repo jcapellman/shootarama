@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -11,17 +12,17 @@ namespace shootarama.DB
 {
     public class DBManager : DbContext
     {
-        public DbSet<Players> Players { get; set; }
-        
-        public DbSet<Teams> Teams { get; set; }
+        protected DbSet<Players> Players { get; set; }
 
-        public DbSet<LocationNames> LocationNames { get; set; }
+        protected DbSet<Teams> Teams { get; set; }
 
-        public DbSet<TeamNames> TeamNames { get; set; }
+        protected DbSet<LocationNames> LocationNames { get; set; }
 
-        public DbSet<PlayerNames> PlayerNames { get; set; }
+        protected DbSet<TeamNames> TeamNames { get; set; }
 
-        public DbSet<Games> Games { get; set; }
+        protected DbSet<PlayerNames> PlayerNames { get; set; }
+
+        protected DbSet<Games> Games { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -31,6 +32,22 @@ namespace shootarama.DB
         public void Initialize()
         {
             Database.Migrate();
+        }
+
+        public T SelectOne<T>(System.Linq.Expressions.Expression<Func<T, bool>> expression = null) where T : BaseTable
+        {
+            return Set<T>().FirstOrDefault(expression);
+        }
+
+        public List<T> SelectMany<T>(System.Linq.Expressions.Expression<Func<T, bool>> expression = null) where T: BaseTable
+        {
+            return Set<T>().Where(expression).ToList();            
+        }
+
+        public async Task<int> InsertOneAsync<T>(T obj) where T : BaseTable
+        {
+            Set<T>().Add(obj);
+            return await SaveChangesAsync();
         }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())

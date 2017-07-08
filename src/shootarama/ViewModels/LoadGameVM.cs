@@ -25,7 +25,7 @@ namespace shootarama.ViewModels
         {
             using (var db = new DBManager())
             {
-                GamesList = new ObservableCollection<Games>(db.Games.ToList());
+                GamesList = new ObservableCollection<Games>(db.SelectMany<Games>().ToList());
             }
         }
     }
