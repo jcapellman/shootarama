@@ -12,6 +12,11 @@ namespace shootarama.Controllers
     {
         private ConcurrentStack<MessageContainer> _stack;
 
+        public MessageController()
+        {
+            _stack = new ConcurrentStack<MessageContainer>();
+        }
+
         public void AddMessageAsync(MessageType messageType, dynamic data)
         {
             _stack.Push(new MessageContainer(messageType, data));
