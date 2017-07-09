@@ -34,19 +34,19 @@ namespace shootarama.DB
             Database.Migrate();
         }
 
-        public T SelectOne<T>(System.Linq.Expressions.Expression<Func<T, bool>> expression = null) where T : BaseTable
+        public void Delete<T>(T obj) where T : BaseTable
         {
-            return Set<T>().FirstOrDefault(expression);
+            Set<T>().Remove(obj);
         }
 
-        public List<T> SelectMany<T>(System.Linq.Expressions.Expression<Func<T, bool>> expression = null) where T: BaseTable
-        {
-            return Set<T>().Where(expression).ToList();            
-        }
+        public async Task<T> SelectOneAsync<T>(System.Linq.Expressions.Expression<Func<T, bool>> expression = null) where T : BaseTable => await Set<T>().FirstOrDefaultAsync(expression);
+
+        public List<T> SelectMany<T>(System.Linq.Expressions.Expression<Func<T, bool>> expression = null) where T: BaseTable => Set<T>().Where(expression).ToList();
 
         public async Task<int> InsertOneAsync<T>(T obj) where T : BaseTable
         {
             Set<T>().Add(obj);
+
             return await SaveChangesAsync();
         }
 

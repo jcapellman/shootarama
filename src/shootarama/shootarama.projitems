@@ -28,7 +28,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)DB\Tables\TeamNames.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DB\Tables\Teams.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Enums\MessageType.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Enums\Tables.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameTypes\BaseGameType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameTypes\MyTeam.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)LoadGamePage.xaml.cs">
